@@ -1,0 +1,15 @@
+{
+  "name": "zenpasswd",
+  "version": "0.1.0",
+  "description": "Password generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.1",
+    "gulp-less": "^1.2.3"
+  }
+}
