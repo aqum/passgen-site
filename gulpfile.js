@@ -3,6 +3,8 @@ var less = require('gulp-less');
 
 gulp.task('copy', function() {
   gulp.src('bower_components/jquery/dist/jquery.js')
+    .pipe(gulp.dest('dist/js/lib/'));
+  gulp.src('js/**/*.js')
     .pipe(gulp.dest('dist/js/'));
   gulp.src('bower_components/bootstrap/dist/css/bootstrap.css')
     .pipe(gulp.dest('dist/css/'));
