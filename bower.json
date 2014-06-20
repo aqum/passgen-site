@@ -16,6 +16,8 @@
   ],
   "devDependencies": {
     "bootstrap": "~3.1.1",
-    "zxcvbn": "*"
+    "zxcvbn": "*",
+    "normalize-css": "~3.0.1",
+    "lesshat": "~3.0.2"
   }
 }

@@ -6,7 +6,7 @@ $(function() {
   var length_input = $('#generate-length');
   var pronounceable_input = $('#generate-pronounceable');
 
-  btn.on('click', function() {
+  setTimeout(function() {
     var length = length_input.val();
     var is_pronounceable = pronounceable_input.is(":checked");
 
@@ -18,11 +18,7 @@ $(function() {
     }
 
     output.val(password);
-    strength_output.text(strength.crack_time_display);
-  });
-
-  setTimeout(function() {
-    $('#generate-btn').trigger('click');
+    $('body').attr('class', 'strength-' + strength.score);
   }, 20);
 });
 

@@ -1,0 +1,65 @@
+@import (less) "bower_components/normalize-css/normalize.css";
+
+@import "bower_components/lesshat/build/lesshat.less";
+
+* {
+  .box-sizing(border-box);
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+fieldset {
+  border: 0;
+}
+
+body {
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+
+  .transition(background-color .5s);
+
+  &,
+  &.strength-4 {
+    background: #2CC36B;
+  }
+
+  &.strength-0 {
+    background: #D14233;
+  }
+  &.strength-1 {
+    background: #E74C3C;
+  }
+  &.strength-2 {
+    background: #D35400;
+  }
+  &.strength-3 {
+    background: #E98B39;
+  }
+}
+
+.generator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 0;
+  width: 640px;
+  .translate(-50%, -50%);
+}
+
+.generator-output {
+  display: block;
+  padding: 15px;
+  width: 100%;
+  background: none;
+  border: 0;
+  border-bottom: 4px solid rgba(255,255,255,.3);
+  text-align: center;
+  font-size: 48px;
+}
+
+.generator-recipe {
+}
