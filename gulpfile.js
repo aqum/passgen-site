@@ -4,7 +4,6 @@ var less = require('gulp-less');
 gulp.task('copy', function() {
   gulp.src([
     'bower_components/jquery/dist/jquery.js',
-    'bower_components/zxcvbn/zxcvbn-async.js',
     'bower_components/zxcvbn/zxcvbn.js'
   ])
     .pipe(gulp.dest('dist/js/lib/'));
