@@ -448,6 +448,8 @@ body.strength-3 .generator-slider-label {
   border: 0;
   text-align: center;
   font-size: 48px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .password-strength {
   text-align: center;
