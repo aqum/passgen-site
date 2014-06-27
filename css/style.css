@@ -370,7 +370,6 @@ fieldset {
   border: 0;
 }
 body {
-  margin-top: 50px;
   padding: 0;
   color: #fff;
 }
@@ -413,10 +412,28 @@ body.strength-3 {
 body.strength-3 .generator-slider-label {
   color: #ff9f20;
 }
+.generator {
+  margin-top: 50px;
+}
 @media (min-height: 768px) {
-  body {
+  .generator {
     margin-top: 150px;
   }
+}
+.zenbox-branding {
+  padding: 15px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.35);
+  font-size: 14px;
+  font-weight: bold;
+}
+.zenbox-branding img {
+  display: inline-block;
+  vertical-align: middle;
+  opacity: .4;
+}
+.zenbox-branding a:hover img {
+  opacity: .6;
 }
 .width-limiter {
   max-width: 640px;
