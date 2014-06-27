@@ -1,5 +1,4 @@
 @import (less) "bower_components/normalize-css/normalize.css";
-
 @import "bower_components/lesshat/build/lesshat.less";
 
 * {
@@ -10,13 +9,16 @@
   }
 }
 
+a {
+  cursor: pointer;
+}
+
 fieldset {
   border: 0;
 }
 
 body {
-  max-width: 960px;
-  margin: auto;
+  padding: 0;
   text-align: center;
   color: #fff;
 
@@ -41,6 +43,12 @@ body {
   }
 }
 
+.width-limiter {
+  max-width: 640px;
+  width: 90%;
+  margin: auto;
+}
+
 .generator {
   position: absolute;
   top: 50%;
@@ -52,7 +60,7 @@ body {
 
 .generator-output {
   display: block;
-  padding: 15px;
+  padding: 15px 0;
   width: 100%;
   background: none;
   border: 0;
@@ -60,24 +68,18 @@ body {
   font-size: 48px;
 }
 
-.generator-recipe {
-  width: 640px;
-  margin: auto;
-}
-
 .generator-slider {
   position: relative;
   height: 6px;
-  margin-top: 20px;
-  margin-bottom: 50px; //make room for label
-  background: #fff;
-  background: rgba(255,255,255,.3);
+  margin: 20px 0 50px;
+  background-color: rgba(255,255,255,.3);
 
   .ui-slider-handle {
     position: absolute;
     top: 50%;
     display: inline-block;
     margin-top: -10px;
+    margin-left: -10px;
     width: 20px;
     height: 20px;
     background: #fff;
@@ -141,4 +143,27 @@ body {
       }
     }
   }
+}
+
+.generator-instructions {
+  padding: 0;
+  margin-top: 6em;
+  list-style: none;
+  text-align: left;
+  color: rgba(0,0,0,.3);
+
+  > li {
+    margin: 10px 0;
+  }
+}
+
+.generator-btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 4px;
+  line-height: 26px; //padding does not align background properly
+  border-radius: 3px;
+  background-color: rgba(0,0,0,0.1);
+
+  &:hover { background-color: rgba(0,0,0,0.3); }
 }
