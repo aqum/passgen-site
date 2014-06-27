@@ -1,6 +1,15 @@
 @import (less) "bower_components/normalize-css/normalize.css";
 @import "bower_components/lesshat/build/lesshat.less";
 
+@color-text: #fff;
+@color-text-dark: rgba(0,0,0,.35);
+
+@strength-color-0: #AB263B;
+@strength-color-1: #E74C3C;
+@strength-color-2: #D35400;
+@strength-color-3: #FF9F20;
+@strength-color-4: #2CC36B;
+
 * {
   .box-sizing(border-box);
 
@@ -22,25 +31,48 @@ body {
   margin-top: 50px;
   padding: 0;
   color: #fff;
-
-  .transition(background-color .5s);
+  
+  // slider label color changes with background
+  &,
+  .generator-slider-label {
+    .transition(background-color .5s);
+  }
 
   &,
   &.strength-4 {
-    background: #2CC36B;
+    background: @strength-color-4;
+
+    .generator-slider-label {
+      color: @strength-color-4;
+    }
   }
 
   &.strength-0 {
-    background: #D14233;
+    background: @strength-color-0;
+
+    .generator-slider-label {
+      color: @strength-color-0;
+    }
   }
   &.strength-1 {
-    background: #E74C3C;
+    background: @strength-color-1;
+
+    .generator-slider-label {
+      color: @strength-color-1;
+    }
   }
   &.strength-2 {
-    background: #D35400;
+    background: @strength-color-2;
+    .generator-slider-label {
+      color: @strength-color-2;
+    }
   }
   &.strength-3 {
-    background: #E98B39;
+    background: @strength-color-3;
+
+    .generator-slider-label {
+      color: @strength-color-3;
+    }
   }
   
   @media (min-height: 768px) {
@@ -66,12 +98,18 @@ body {
 
 .password-strength {
   text-align: center;
-  color: rgba(0,0,0,.3);
+  color: @color-text-dark;
   font-weight: bold;
 }
 
 .generator-recipe {
   margin: 50px 0;
+}
+
+.generator-slider-wrapper {
+  label {
+    font-size: 18px;
+  }
 }
 
 .generator-slider {
@@ -133,7 +171,7 @@ body {
         vertical-align: middle;
         width: 24px;
         height: 24px;
-        margin-right: 10px;
+        margin-right: 5px;
         border-radius: 3px;
         background-color: rgba(0,0,0,0.2);
     }
@@ -155,9 +193,15 @@ body {
   padding: 0;
   margin-top: 6em;
   list-style: none;
-  color: rgba(0,0,0,.3);
+  color: @color-text-dark;
 
   p { margin: 10px 0; }
+
+  hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 2px solid rgba(0,0,0,.1);
+  }
 }
 
 .generator-btn {
@@ -167,6 +211,12 @@ body {
   line-height: 26px; //padding does not align background properly
   border-radius: 3px;
   background-color: rgba(0,0,0,0.1);
+  color: @color-text-dark;
+  font-weight: bold;
+}
 
-  &:hover { background-color: rgba(0,0,0,0.3); }
+a.generator-btn {
+  text-decoration: none;
+
+  &:hover { background-color: rgba(0,0,0,0.15); }
 }

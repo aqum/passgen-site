@@ -15,7 +15,7 @@ $(function() {
   length_slider.slider({
     value: default_length,
     min: 6,
-    max: 41,
+    max: 40,
     step: 1,
     create: function() {
       var label = $('<span/>').text(length_slider.slider('value'));

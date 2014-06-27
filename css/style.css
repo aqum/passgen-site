@@ -373,6 +373,9 @@ body {
   margin-top: 50px;
   padding: 0;
   color: #fff;
+}
+body,
+body .generator-slider-label {
   -webkit-transition: background-color 0.5s;
   -moz-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
@@ -380,19 +383,35 @@ body {
 }
 body,
 body.strength-4 {
-  background: #2CC36B;
+  background: #2cc36b;
+}
+body .generator-slider-label,
+body.strength-4 .generator-slider-label {
+  color: #2cc36b;
 }
 body.strength-0 {
-  background: #D14233;
+  background: #ab263b;
+}
+body.strength-0 .generator-slider-label {
+  color: #ab263b;
 }
 body.strength-1 {
-  background: #E74C3C;
+  background: #e74c3c;
+}
+body.strength-1 .generator-slider-label {
+  color: #e74c3c;
 }
 body.strength-2 {
-  background: #D35400;
+  background: #d35400;
+}
+body.strength-2 .generator-slider-label {
+  color: #d35400;
 }
 body.strength-3 {
-  background: #E98B39;
+  background: #ff9f20;
+}
+body.strength-3 .generator-slider-label {
+  color: #ff9f20;
 }
 @media (min-height: 768px) {
   body {
@@ -415,11 +434,14 @@ body.strength-3 {
 }
 .password-strength {
   text-align: center;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.35);
   font-weight: bold;
 }
 .generator-recipe {
   margin: 50px 0;
+}
+.generator-slider-wrapper label {
+  font-size: 18px;
 }
 .generator-slider {
   position: relative;
@@ -486,7 +508,7 @@ body.strength-3 {
   vertical-align: middle;
   width: 24px;
   height: 24px;
-  margin-right: 10px;
+  margin-right: 5px;
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -502,10 +524,15 @@ body.strength-3 {
   padding: 0;
   margin-top: 6em;
   list-style: none;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.35);
 }
 .generator-details p {
   margin: 10px 0;
+}
+.generator-details hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
 }
 .generator-btn {
   display: inline-block;
@@ -514,7 +541,12 @@ body.strength-3 {
   line-height: 26px;
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.35);
+  font-weight: bold;
 }
-.generator-btn:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+a.generator-btn {
+  text-decoration: none;
+}
+a.generator-btn:hover {
+  background-color: rgba(0, 0, 0, 0.15);
 }
