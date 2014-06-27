@@ -86,7 +86,7 @@ function randomNumber(max, min) {
 
 // we have pretty difficult language here in Poland (:
 function translateCrackTime(sentence) {
-  var number = sentence.match(/\d+/);
+  var number = parseInt(sentence.match(/\d+/));
   var word = sentence.replace(number, '').trim();
 
   var translation;
