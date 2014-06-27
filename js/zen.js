@@ -9,6 +9,7 @@ $(function() {
 
   setTimeout(function() {
     fillPasswordInput(default_length);
+    output.select();
   }, 20);
 
   var length_slider = $('#password-length');
@@ -38,9 +39,11 @@ $(function() {
       checkPassword();
     }
   });
+  output.on('click', function() {
+    $(this).select();
+  });
 
 
-  // all around function for making magic in input
   function fillPasswordInput(length) {
     var is_pronounceable = pronounceable_input.is(":checked");
 

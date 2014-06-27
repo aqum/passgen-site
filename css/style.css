@@ -544,6 +544,7 @@ body.strength-3 .generator-slider-label {
   margin-top: 6em;
   list-style: none;
   color: rgba(0, 0, 0, 0.35);
+  line-height: 20px;
 }
 .generator-details p {
   margin: 10px 0;
@@ -557,6 +558,7 @@ body.strength-3 .generator-slider-label {
   display: inline-block;
   vertical-align: middle;
   padding: 0 4px;
+  margin: -3px 0;
   line-height: 26px;
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.1);
