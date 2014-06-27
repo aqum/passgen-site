@@ -11,7 +11,6 @@ $(function() {
     fillPasswordInput(default_length);
   }, 20);
 
-
   var length_slider = $('#password-length');
   length_slider.slider({
     value: default_length,
@@ -30,6 +29,12 @@ $(function() {
     }
   });
 
+  pronounceable_input.on('change', function() {
+    fillPasswordInput(length_slider.slider('value'));
+  });
+
+
+  // all around function for making magic in input
   function fillPasswordInput(length) {
     var is_pronounceable = pronounceable_input.is(":checked");
 

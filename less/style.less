@@ -68,7 +68,8 @@ body {
 .generator-slider {
   position: relative;
   height: 6px;
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 50px; //make room for label
   background: #fff;
   background: rgba(255,255,255,.3);
 
@@ -112,66 +113,32 @@ body {
   }
 }
 
-// .ui-slider {
-//   position: relative;
-//   text-align: left;
-// }
-// .ui-slider .ui-slider-handle {
-//   position: absolute;
-//   z-index: 2;
-//   width: 1.2em;
-//   height: 1.2em;
-//   cursor: default;
-// }
-// .ui-slider .ui-slider-range {
-//   position: absolute;
-//   z-index: 1;
-//   font-size: .7em;
-//   display: block;
-//   border: 0;
-//   background-position: 0 0;
-// }
+.generator-checkbox {
+  cursor: pointer;
+  font-size: 18px;
 
-// /* For IE8 - See #6727 */
-// .ui-slider.ui-state-disabled .ui-slider-handle,
-// .ui-slider.ui-state-disabled .ui-slider-range {
-//   filter: inherit;
-// }
+  input[type=checkbox] {
+    display: none;
 
-// .ui-slider-horizontal {
-//   height: .8em;
-// }
-// .ui-slider-horizontal .ui-slider-handle {
-//   top: -.3em;
-//   margin-left: -.6em;
-// }
-// .ui-slider-horizontal .ui-slider-range {
-//   top: 0;
-//   height: 100%;
-// }
-// .ui-slider-horizontal .ui-slider-range-min {
-//   left: 0;
-// }
-// .ui-slider-horizontal .ui-slider-range-max {
-//   right: 0;
-// }
+    + .generator-checkbox-indicator {
+        display: inline-block;
+        vertical-align: middle;
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        border-radius: 3px;
+        background-color: rgba(0,0,0,0.2);
+    }
 
-// .ui-slider-vertical {
-//   width: .8em;
-//   height: 100px;
-// }
-// .ui-slider-vertical .ui-slider-handle {
-//   left: -.3em;
-//   margin-left: 0;
-//   margin-bottom: -.6em;
-// }
-// .ui-slider-vertical .ui-slider-range {
-//   left: 0;
-//   width: 100%;
-// }
-// .ui-slider-vertical .ui-slider-range-min {
-//   bottom: 0;
-// }
-// .ui-slider-vertical .ui-slider-range-max {
-//   top: 0;
-// }
+    &:checked {
+      + .generator-checkbox-indicator {
+        background: rgba(0,0,0,0.4) no-repeat center center;
+        background-size: 75% 75%;
+        .box-shadow(0 0 0 3px rgba(255,255,255,0.4));
+        
+        // check sign borrowed from: http://wtfforms.com
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=);
+      }
+    }
+  }
+}
