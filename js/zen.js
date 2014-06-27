@@ -26,7 +26,7 @@ $(function() {
     slide: function(event, ui) {
       fillPasswordInput(ui.value);
 
-      length_slider.find('.generator-slider-label').text(length_slider.slider('value'));
+      length_slider.find('.generator-slider-label').text(ui.value);
     }
   });
 
