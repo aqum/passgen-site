@@ -12,8 +12,7 @@
         <input class="generator-output" id="generate-output" type="text">
       </fieldset>
       <fieldset class="generator-recipe" id="generator-recipe">
-        <label>Length</label>
-        <input class="form-control input-sm" id="generate-length" type="number" value="20">
+        <div id="password-length" class="generator-slider"></div>
         <label>
           <input type="checkbox" id="generate-pronounceable"> Pronouncable
         </label>
@@ -21,6 +20,8 @@
     </div>
 
     <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/jquery.ui.custom.js"></script>
+    <script src="js/lib/jquery.ui.touch-punch.js"></script>
     <script src="js/lib/password-generator.js"></script>
     <script src="js/lib/zxcvbn.js"></script>
     <script src="js/zen.js"></script>

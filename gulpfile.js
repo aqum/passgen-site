@@ -26,7 +26,7 @@ gulp.task('copy', function() {
       'bower_components/jquery/dist/jquery.js',
       'bower_components/zxcvbn/zxcvbn.js'
     ])
-    .pipe(gulp.dest('lib/'));
+    .pipe(gulp.dest('js/lib/'));
 });
 
 gulp.task('watch', function() {

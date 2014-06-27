@@ -394,14 +394,14 @@ body.strength-3 {
 .generator {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 0;
   border: 0;
-  width: 640px;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .generator-output {
   display: block;
@@ -409,7 +409,63 @@ body.strength-3 {
   width: 100%;
   background: none;
   border: 0;
-  border-bottom: 4px solid rgba(255, 255, 255, 0.3);
   text-align: center;
   font-size: 48px;
+}
+.generator-recipe {
+  width: 640px;
+  margin: auto;
+}
+.generator-slider {
+  position: relative;
+  height: 6px;
+  margin: 20px 0;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.3);
+}
+.generator-slider .ui-slider-handle {
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.generator-slider-label {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: inline-block;
+  padding: 3px 10px;
+  background: #fff;
+  border-radius: 3px;
+  color: #2CC36B;
+  font-size: 14px;
+  font-weight: bold;
+}
+.generator-slider-label:before {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: block;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: #fff;
+  content: '';
 }

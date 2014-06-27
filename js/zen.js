@@ -2,12 +2,35 @@ $(function() {
   var btn = $('#generate-btn');
   var output = $('#generate-output');
   var strength_output = $('#strength');
+  var default_length = 20;
 
-  var length_input = $('#generate-length');
+  var length_input = $('#password-length');
   var pronounceable_input = $('#generate-pronounceable');
 
   setTimeout(function() {
-    var length = length_input.val();
+    fillPasswordInput(default_length);
+  }, 20);
+
+
+  var length_slider = $('#password-length');
+  length_slider.slider({
+    value: default_length,
+    min: 6,
+    max: 41,
+    step: 1,
+    create: function() {
+      var label = $('<span/>').text(length_slider.slider('value'));
+      label.addClass('generator-slider-label');
+      length_slider.find('.ui-slider-handle').html(label);
+    },
+    slide: function(event, ui) {
+      fillPasswordInput(ui.value);
+
+      length_slider.find('.generator-slider-label').text(length_slider.slider('value'));
+    }
+  });
+
+  function fillPasswordInput(length) {
     var is_pronounceable = pronounceable_input.is(":checked");
 
     var password = generatePassword(length, is_pronounceable);
@@ -19,8 +42,10 @@ $(function() {
 
     output.val(password);
     $('body').attr('class', 'strength-' + strength.score);
-  }, 20);
+  }
 });
+
+
 
 function separateString(string, separator) {
   string.split('');
