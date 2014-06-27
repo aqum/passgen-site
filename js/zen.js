@@ -34,10 +34,11 @@ $(function() {
     fillPasswordInput(length_slider.slider('value'));
   });
 
-  output.on('keypress', function(event) {
-    if (event.which == 13) {
-      checkPassword();
-    }
+  output.on('input', function() {
+    var password = output.val();
+    var strength = zxcvbn(password);
+    $('body').attr('class', 'strength-' + strength.score);
+    strength_output.text(strength.crack_time_display);
   });
   output.on('click', function() {
     $(this).select();
@@ -53,15 +54,7 @@ $(function() {
       password = separateString(password, '-');
     }
 
-    output.val(password);
-    checkPassword();
-  }
-
-  function checkPassword() {
-    var password = output.val();
-    var strength = zxcvbn(password);
-    $('body').attr('class', 'strength-' + strength.score);
-    strength_output.text(strength.crack_time_display);
+    output.val(password).trigger('input');
   }
 });
 
