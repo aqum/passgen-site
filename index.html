@@ -11,17 +11,23 @@
       <fieldset>
         <input class="generator-output" id="generate-output" type="text">
       </fieldset>
-      <fieldset class="generator-recipe width-limiter" id="generator-recipe">
-        <div id="password-length" class="generator-slider"></div>
-          <label for="generate-pronounceable" class="generator-checkbox">
-            <input type="checkbox" id="generate-pronounceable">
-            <span class="generator-checkbox-indicator"></span>
-            Make pronouncable
-          </label>
-      </fieldset>
-      <ul class="generator-instructions width-limiter">
-        <li><a class="generator-btn" onclick="window.location.reload()">↺ reload</a> page to generate new password.</li>
-      </ul>
+      <div class="width-limiter">
+        <div class="password-strength">Crack time: <span id="password-strength-output"></span></div>
+
+        <fieldset class="generator-recipe" id="generator-recipe">
+          <div id="password-length" class="generator-slider"></div>
+            <label for="generate-pronounceable" class="generator-checkbox">
+              <input type="checkbox" id="generate-pronounceable">
+              <span class="generator-checkbox-indicator"></span>
+              Make pronouncable
+            </label>
+        </fieldset>
+
+        <div class="generator-details">
+          <p><a class="generator-btn" oncpck="window.location.reload()">↺ reload</a> page to generate new password.</p>
+          <p>You can check strength by pasting other password and hit <span class="generator-btn">↵</span>.</p>
+        </div>
+      </div>
     </div>
 
     <script src="js/lib/jquery.js"></script>

@@ -1,7 +1,7 @@
 $(function() {
   var btn = $('#generate-btn');
   var output = $('#generate-output');
-  var strength_output = $('#strength');
+  var strength_output = $('#password-strength-output');
   var default_length = 20;
 
   var length_input = $('#password-length');
@@ -33,20 +33,32 @@ $(function() {
     fillPasswordInput(length_slider.slider('value'));
   });
 
+  output.on('keypress', function(event) {
+    if (event.which == 13) {
+      checkPassword();
+    }
+  });
+
 
   // all around function for making magic in input
   function fillPasswordInput(length) {
     var is_pronounceable = pronounceable_input.is(":checked");
 
     var password = generatePassword(length, is_pronounceable);
-    var strength = zxcvbn(password);
 
     if (is_pronounceable) {
       password = separateString(password, '-');
     }
 
     output.val(password);
+    checkPassword();
+  }
+
+  function checkPassword() {
+    var password = output.val();
+    var strength = zxcvbn(password);
     $('body').attr('class', 'strength-' + strength.score);
+    strength_output.text(strength.crack_time_display);
   }
 });
 

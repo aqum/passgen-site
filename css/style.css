@@ -366,11 +366,12 @@ a {
   cursor: pointer;
 }
 fieldset {
+  padding: 0;
   border: 0;
 }
 body {
+  margin-top: 50px;
   padding: 0;
-  text-align: center;
   color: #fff;
   -webkit-transition: background-color 0.5s;
   -moz-transition: background-color 0.5s;
@@ -393,22 +394,15 @@ body.strength-2 {
 body.strength-3 {
   background: #E98B39;
 }
+@media (min-height: 768px) {
+  body {
+    margin-top: 150px;
+  }
+}
 .width-limiter {
   max-width: 640px;
   width: 90%;
   margin: auto;
-}
-.generator {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  border: 0;
-  width: 100%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 .generator-output {
   display: block;
@@ -418,6 +412,14 @@ body.strength-3 {
   border: 0;
   text-align: center;
   font-size: 48px;
+}
+.password-strength {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+.generator-recipe {
+  margin: 50px 0;
 }
 .generator-slider {
   position: relative;
@@ -496,14 +498,13 @@ body.strength-3 {
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=);
 }
-.generator-instructions {
+.generator-details {
   padding: 0;
   margin-top: 6em;
   list-style: none;
-  text-align: left;
   color: rgba(0, 0, 0, 0.3);
 }
-.generator-instructions > li {
+.generator-details p {
   margin: 10px 0;
 }
 .generator-btn {
